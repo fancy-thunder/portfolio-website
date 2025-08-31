@@ -1,0 +1,566 @@
+.nav-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-second{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AS-tag{
+    padding-left: 5em;
+}
+
+.nav-about > .about-content{
+    padding-right: 1.3em;
+    font-size: small;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.download-button{
+    margin-left: 1.5em;
+    margin-right: 5em;
+    background-color: rgb(17,24,39);
+    color: white;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-about{
+    display: flex;
+    align-items: center;
+}
+
+.download-cv{
+    display: flex;
+    align-items: center;
+}
+
+.contact-tag{
+    margin-right: 4em;
+}
+
+.about-main{
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+}
+
+.about-main > .about-left{
+    width: 70%;
+}
+
+.about-main > .about-right{
+    width: 30%;
+}
+
+.about-main > .about-left >.about-heading{
+    font-size: 3em;
+}
+
+.about-main > .about-left  >.about-paragraph{
+    font-size: medium;
+    color: rgb(75,85,99);
+}
+
+.about-main > .about-left > .location-icon{
+    size: 2em;
+}
+
+.about-main > .about-left >.location >.location-tag{
+    text-decoration: none;
+    color: rgb(75,85,99);
+}
+
+.about-main >.about-left >.location{
+    display: flex;
+}
+
+.about-main >.about-left >.online{    
+    display: flex;
+    align-items: center;
+}
+
+.about-main > .about-left > .online >.online-icon{
+    color: rgb(107, 239, 107);
+}
+
+.about-main > .about-left >.online >.online-paragraph{
+    color: rgb(75,85,99);
+}
+
+.about-main > .about-left >.about-social-icons{
+    padding-right: 1em;
+    text-decoration: none;
+    font-size: x-large;
+    color: black;
+}
+
+.about-main > .about-right >.profile-pic{
+    width: 20em;
+    height: 20em;
+    box-shadow: 45px 45px rgb(229,231,235);
+}
+
+.about-me-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-div >.about-me-button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+}
+
+.about-me-main{
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+}
+
+.about-me-main >.about-me-left{
+    width: 50%;
+    
+}
+
+.about-me-main >.about-me-left >.about-me-pic{
+    margin-top: 2vh;
+    width: 30em;
+    height: 35em;
+    box-shadow: 45px 45px rgb(229,231,235);
+}
+
+.about-me-main >.about-me-right{
+    width: 50%;
+}
+
+.about-me-main >.about-me-right >.about-me-heading{
+    font-weight: 600;
+}
+
+.about-me-main >.about-me-right >.about-me-paragraph{
+    color: rgb(75,85,99);
+}
+
+.about-me-main >.about-me-right >.about-me-paragraph >.socials{
+    color: rgb(75,85,99);
+}
+
+.about-me-main >.about-me-right >.about-me-paragraph >.points-main >ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-me-main >.about-me-right >.about-me-paragraph >.points-main >.points-left{
+    width: 50%;
+}
+
+.about-me-main >.about-me-right >.about-me-paragraph >.points-main >.points-right{
+    width: 50%; 
+}
+
+.skill-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-main-container >.skill-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-main-container >.skill-container >.skill-button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.skill-main-container >.skill-container >.skill-paragraph{
+    color: rgb(75,85,99);
+    margin-bottom: 2em;
+}
+
+
+.skill-main-container >.skill-icons-main >.skill-first-rack{
+    display: flex;
+    flex-direction: row;
+}
+
+.skill-main-container >.skill-icons-main >.skill-first-rack >.skill-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 4em;
+}
+
+.skill-main-container >.skill-icons-main >.skill-first-rack >.skill-icons >.skill-name{
+    font-size: 0.8em;
+    color: rgb(75,85,99);
+}
+
+.experience-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-main >.experience-button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    border-radius: 25%;
+    background-color: rgb(229,231,235);
+    color: rgb(75,85,99);
+    font-weight: 600;
+}
+
+.experience-main >.experience-paragraph{
+    color: rgb(75,85,99);
+}
+
+.experience-list-main{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-list-main >.experience-border{
+    box-shadow: 2px 2px rgb(229,231,235);
+    border-radius: 4%;
+    margin-bottom: 2em;
+}
+
+.experience-list-main >.experience-border >.experiences{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-list-main >.experience-border >.experiences >.experience-logo{
+    padding-left: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.experience-list-main >.experience-border >.experiences >.experience-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.experience-list-main >.experience-border >.experiences >.experience-details >h1{
+    font-size: medium;
+}
+
+.experience-list-main >.experience-border >.experiences >.experience-details >ul >li{
+    color: rgb(75,85,99);
+    font-size: 0.70;
+}
+
+.experience-list-main >.experience-border >.experiences >.experience-date >p{
+    color: rgb(75,85,99);
+    font-size: small;
+    padding-right: 1em;
+}
+
+.work-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4em;
+}
+
+.work-container >.work-button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.work-container >.work-paragraph{
+    color: rgb(75,85,99);
+    margin-bottom: 2em;
+}
+
+.project-main{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.project-main >.projects{
+    display: flex;
+    flex-direction: row;
+    min-height: 200px;
+    box-shadow: 2px 2px rgb(229,231,235);
+    border-radius: 4%;
+    margin-bottom: 2em;
+}
+
+.project-main >.projects >.project1-left{
+    width: 50%;
+    min-height: 200px;
+}
+
+.project-main >.projects >.project1-right{
+    width: 50%;
+    padding-left: 1em;
+}
+
+.project-main >.projects >.project1-right >.right-div >a{
+    color: black;
+    text-decoration: none;
+    font-size: xx-small;
+}
+
+.project-main >.projects >.project1-right >.right-div >p{
+    color: rgb(75,85,99);
+    font-size: x-small;
+    padding-right: 1em;
+}
+
+.project-main >.projects >.project1-right >.right-div >.project-skill-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.project-main >.projects >.project1-right >.right-div >.project-skill-buttons >button{
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
+}
+
+.projects >.project2-left{
+    width: 50%;
+    padding-left: 1em;
+}
+
+.projects >.project2-right{
+    width: 50%;
+    min-height: 200px;
+}
+
+.projects >.project2-left >.left-div >a{
+    color: black;
+    text-decoration: none;
+    font-size: xx-small;
+}
+
+.project-main >.projects >.project2-left >.left-div >p{
+    color: rgb(75,85,99);
+    font-size: x-small;
+    padding-right: 1em;
+}
+
+.project-main >.projects >.project2-left >.left-div >.project-skill-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.project-main >.projects >.project2-left >.left-div >.project-skill-buttons >button{
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
+}
+
+.testimonial-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-main >button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 3em;
+}
+
+.testimonial-main >p{
+    color: rgb(75,85,99);
+    margin-bottom: 2em;
+}
+
+.testimonial-container-main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.testimonial-container-main >.testimonials{
+    box-shadow: 2px 2px rgb(229,231,235);
+    border-radius: 4%;
+    margin-bottom: 2em;
+}
+
+.testimonial-container-main >.testimonials >.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-container-main >.testimonials >.testimonial-card >.pfp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-container-main >.testimonials >.testimonial-card >.pfp >img{
+    border-radius: 50%;
+}
+
+
+.testimonial-container-main >.testimonials >.testimonial-card >q{
+    color: rgb(75,85,99);
+}
+
+.testimonial-container-main >.testimonials >.testimonial-card >.name-and-designation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.testimonial-container-main >.testimonials >.testimonial-card >.name-and-designation >h1{
+    font-size: 1em;
+}
+
+.testimonial-container-main >.testimonials >.testimonial-card >.name-and-designation >p{
+    color: rgb(75,85,99);
+    font-size: x-small;
+}
+
+.get-in-touch-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-in-touch-container > .contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-in-touch-container > .contents >button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    background-color: rgb(229,231,235);
+    border-radius: 25%;
+    color: rgb(75,85,99);
+    font-weight: 600;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.get-in-touch-container > .contents >p{
+    color: rgb(75,85,99);
+}
+
+.get-in-touch-container > .contents >a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.get-in-touch-container > .contents >.content-platforms{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-in-touch-container > .contents >.content-platforms> a{
+    padding-right: 1em;
+    text-decoration: none;
+    font-size: x-large;
+    color: black;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer >p{
+    color: rgb(75,85,99);
+}
+  
