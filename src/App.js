@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from './Components/Navbar'
 import Aboutpage from './Components/Aboutpage'
 import Aboutmepage from './Components/Aboutmepage'
@@ -12,6 +12,9 @@ import Chatbot from './Components/Chatbot'
 
 const App = () => {
   const [hovering, setHovering] = useState(false);
+  useEffect(() => {
+    document.title = "Avishek Sen";
+  }, []);
   return (
     <div>
       <Navbar/>
