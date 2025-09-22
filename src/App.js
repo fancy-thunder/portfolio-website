@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Navbar from './Components/Navbar'
-import Aboutpage from './Components/Aboutpage'
-import Aboutmepage from './Components/Aboutmepage'
-import Skillpage from './Components/Skillpage'
-import Experiencepage from './Components/Experiencepage'
-import Projectpage from './Components/Projectpage'
-import Testimonials from './Components/Testimonials'
-import Getintouch from './Components/Getintouch'
-import Footer from './Components/Footer'
-import Chatbot from './Components/Chatbot'
+import Navbar from "./Components/Navbar";
+import Aboutpage from "./Components/Aboutpage";
+import Aboutmepage from "./Components/Aboutmepage";
+import Skillpage from "./Components/Skillpage";
+import Experiencepage from "./Components/Experiencepage";
+import Projectpage from "./Components/Projectpage";
+import Getintouchpage from "./Components/Getintouchpage"
+import Footer from "./Components/Footer";
+import Chatbot from "./Components/Chatbot";
 
 const App = () => {
   const [hovering, setHovering] = useState(false);
@@ -17,18 +16,17 @@ const App = () => {
   }, []);
   return (
     <div>
-      <Navbar/>
-      <Chatbot/>
-      <Aboutpage/>
-      <Aboutmepage/>
-      <Skillpage/>
-      <Experiencepage/>
-      <Projectpage/>
-      <Testimonials/>
-      <Getintouch/>
-      <Footer/>
+      <Navbar />
+      <Chatbot />
+      <Aboutpage />
+      <Aboutmepage />
+      <Skillpage />
+      <Experiencepage />
+      <Projectpage />
+      <Getintouchpage />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

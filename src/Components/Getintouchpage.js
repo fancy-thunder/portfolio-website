@@ -1,0 +1,72 @@
+import React from "react";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import ContentCopyOutlinedIcon from "@mui/icons-material/ContentCopyOutlined";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
+const Getintouchpage = () => {
+  return (
+    <div className="bg-gray-50 py-0 px-4 font-sans flex flex-col items-center justify-center min-h-screen">
+      {/* Button */}
+      <button className="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold">
+        Get in touch
+      </button>
+      {/* Subtitle */}
+      <p className="text-center text-gray-600 text-base max-w-xl">
+        What&apos;s next? Feel free to reach out to me if you&apos;re looking
+        for a developer, have a query, or simply want to connect.
+      </p>
+      {/* Email and Phone */}
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex items-center gap-2">
+          <EmailOutlinedIcon className="text-gray-500" />
+          <span className="text-xl md:text-2xl font-bold text-gray-900">
+            reachsagarshah@gmail.com
+          </span>
+          <ContentCopyOutlinedIcon className="text-gray-400 cursor-pointer" />
+        </div>
+        <div className="flex items-center gap-2">
+          <LocalPhoneOutlinedIcon className="text-gray-500" />
+          <span className="text-xl md:text-2xl font-bold text-gray-900">
+            +91 8980500565
+          </span>
+          <ContentCopyOutlinedIcon className="text-gray-400 cursor-pointer" />
+        </div>
+      </div>
+      {/* Socials */}
+      <div className="text-center text-gray-500 text-sm">
+        You may also find me on these platforms!
+      </div>
+      <div className="flex items-center justify-center gap-6">
+        <a
+          href="https://github.com/fancy-thunder"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-black"
+        >
+          <GitHubIcon fontSize="medium" />
+        </a>
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-blue-400"
+        >
+          <TwitterIcon fontSize="medium" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/abhishek-sen-366960200/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-blue-700"
+        >
+          <LinkedInIcon fontSize="medium" />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Getintouchpage;

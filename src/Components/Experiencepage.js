@@ -16,7 +16,7 @@ const experiences = [
 
 const Experiencepage = () => {
   return (
-    <div className="bg-gray-50 py-0 px-4 font-sans">
+    <div className="bg-gray-50 py-12 px-4 font-sans">
       <div className="max-w-4xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-4">
