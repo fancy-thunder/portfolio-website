@@ -10,9 +10,9 @@ const Aboutmepage = () => {
             About me
           </span>
         </div>
-        {/* Main Content: Image and Text */}
+        {/* Main Content: Image and Text side by side */}
         <div className="flex flex-col md:flex-row items-start gap-12">
-          {/* Left Section: Image with gray border */}
+          {/* Left Section: Image (CSS visual) */}
           <div className="md:w-1/2 w-full flex justify-center">
             <div className="relative w-[400px] h-[500px]">
               <div className="absolute left-[-24px] top-[-24px] w-[400px] h-[500px] bg-gray-100 rounded-md z-0"></div>
@@ -23,7 +23,7 @@ const Aboutmepage = () => {
               />
             </div>
           </div>
-          {/* Right Section: Content */}
+          {/* Right Section: Content (HTML/JS) */}
           <div className="md:w-1/2 w-full font-sans">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 font-sans">
               Curious about me? Here you have it:

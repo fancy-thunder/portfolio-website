@@ -59,12 +59,12 @@ const tools = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
   {
-    name: "Cursor",
-    icon: "https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/cursor.svg",
-  },
-  {
     name: "Vercel",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+  },
+  {
+    name: "PostMan",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
   },
 ];
 
@@ -103,29 +103,8 @@ const Skillpage = () => {
             ))}
           </div>
         </div>
-        {/* Frameworks */}
-        <div className="mb-10">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
-            Frameworks
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-y-10 gap-x-6 md:gap-x-12 justify-items-center">
-            {frameworks.map((fw) => (
-              <div key={fw.name} className="flex flex-col items-center">
-                <img
-                  src={fw.icon}
-                  alt={fw.name}
-                  className="w-14 h-14 mb-2 object-contain"
-                  loading="lazy"
-                />
-                <span className="text-sm md:text-base text-gray-700 font-medium">
-                  {fw.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* Developer Tools */}
-        <div>
+        <div className="mb-10">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
             Developer Tools
           </h3>
@@ -140,6 +119,27 @@ const Skillpage = () => {
                 />
                 <span className="text-sm md:text-base text-gray-700 font-medium">
                   {tool.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Frameworks */}
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+            Frameworks
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-y-10 gap-x-6 md:gap-x-12 justify-items-center">
+            {frameworks.map((fw) => (
+              <div key={fw.name} className="flex flex-col items-center">
+                <img
+                  src={fw.icon}
+                  alt={fw.name}
+                  className="w-14 h-14 mb-2 object-contain"
+                  loading="lazy"
+                />
+                <span className="text-sm md:text-base text-gray-700 font-medium">
+                  {fw.name}
                 </span>
               </div>
             ))}

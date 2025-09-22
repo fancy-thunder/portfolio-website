@@ -10,7 +10,7 @@ const Aboutpage = () => {
     <div className="bg-white py-0 px-4 font-sans">
       {/* Main Section */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 py-8">
-        {/* Left Section */}
+        {/* Left Section: HTML/JS content */}
         <div className="md:w-2/3 w-full">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center">
             Hi, I'm Avishek <span className="ml-2 text-4xl">👋</span>
@@ -58,7 +58,7 @@ const Aboutpage = () => {
             </a>
           </div>
         </div>
-        {/* Right Section */}
+        {/* Right Section: Profile image (CSS visual) */}
         <div className="md:w-1/3 w-full flex justify-center">
           <div className="relative w-64 h-64">
             <div className="absolute top-6 left-6 w-64 h-64 bg-gray-100 rounded-xl z-0"></div>
