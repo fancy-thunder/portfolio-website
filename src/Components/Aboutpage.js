@@ -7,9 +7,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Aboutpage = () => {
   return (
-    <div className="min-h-screen bg-white px-4 md:px-0 flex flex-col justify-center">
+    <div className="bg-white py-0 px-4 font-sans">
       {/* Main Section */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 py-20">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 py-8">
         {/* Left Section */}
         <div className="md:w-2/3 w-full">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center">
