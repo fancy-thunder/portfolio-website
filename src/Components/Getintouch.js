@@ -1,25 +1,64 @@
-import React from 'react'
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import FiberManualRecordRoundedIcon from '@mui/icons-material/FiberManualRecordRounded';
+import React from "react";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import ContentCopyOutlinedIcon from "@mui/icons-material/ContentCopyOutlined";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Getintouch = () => {
   return (
-    <div className="get-in-touch-container" id="contact_section"><br></br><br></br><br></br>
-        <div className="contents">
-            <button>Get in touch</button>
-            <p>I'd love to connect!  Feel free to reach out if you're looking for a developer, have a question, or just want to chat.</p>
-            <br></br><br></br>
-            <a href="mailto:avi.aakash4u@gmail.com?subject=Hello&body=I wanted to reach out...">avi.aakash4u@gmail.com</a>
-            <a href="tel:+91-843-603-1885">+91 84360-31885</a>
-            <br></br><br></br>
-            <p>You may also find me on these platforms</p>
-            <div className="content-platforms">
-                <a href="https://github.com/fancy-thunder" target="_blank" className="about-social-icons"><i class="fa-brands fa-github "></i></a>
-                <a href="https://www.linkedin.com/in/abhishek-sen-366960200/" target="_blank" className="about-social-icons"><i class="fa-brands fa-linkedin"></i></a>
-            </div><br></br><br></br><br></br><br></br>
+    <div className="bg-gray-50 py-12 px-4 font-sans flex flex-col items-center justify-center min-h-screen">
+      {/* Button */}
+      <button className="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold mb-8 mt-4">
+        Get in touch
+      </button>
+      {/* Subtitle */}
+      <p className="text-center text-gray-600 text-base max-w-xl mb-8">
+        I'd love to connect! Feel free to reach out if you're looking for a
+        developer, have a question, or just want to chat.
+      </p>
+      {/* Email and Phone */}
+      <div className="flex flex-col items-center gap-4 mb-8">
+        <div className="flex items-center gap-2">
+          <EmailOutlinedIcon className="text-gray-500" />
+          <span className="text-xl md:text-2xl font-bold text-gray-900">
+            avi.aakash4u@gmail.com
+          </span>
+          <ContentCopyOutlinedIcon className="text-gray-400 cursor-pointer" />
         </div>
+        <div className="flex items-center gap-2">
+          <LocalPhoneOutlinedIcon className="text-gray-500" />
+          <span className="text-xl md:text-2xl font-bold text-gray-900">
+            +91 84360-31885
+          </span>
+          <ContentCopyOutlinedIcon className="text-gray-400 cursor-pointer" />
+        </div>
+      </div>
+      {/* Socials */}
+      <div className="text-center text-gray-500 text-sm mb-2">
+        You may also find me on these platforms!
+      </div>
+      <div className="flex items-center justify-center gap-6 mb-8">
+        <a
+          href="https://github.com/fancy-thunder"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-black"
+        >
+          <GitHubIcon fontSize="medium" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/abhishek-sen-366960200/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-blue-700"
+        >
+          <LinkedInIcon fontSize="medium" />
+        </a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Getintouch
+export default Getintouch;
