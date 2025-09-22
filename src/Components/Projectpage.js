@@ -1,51 +1,98 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+
+const GITHUB_USERNAME = "fancy-thunder"; // change to your GitHub username
+const ALLOWED_REPOS = ["CollabStudy", "weather-dashboard", "portfolio-website"]; // replace with your repo names
 
 const Projectpage = () => {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`)
+      .then((res) => res.json())
+      .then((data) => {
+        // Filter and order repos as specified
+        const filtered = ALLOWED_REPOS.map((name) =>
+          data.find((repo) => repo.name === name)
+        ).filter(Boolean);
+        setRepos(filtered);
+      });
+  }, []);
+
+  // Filter repos before rendering
+  const filteredRepos = repos.filter((repo) =>
+    ALLOWED_REPOS.includes(repo.name)
+  );
+
   return (
-    <div>
-        <div className="work-container" id="work_section">
-            <button className="work-button">Work</button>
-            <p className="work-paragraph">Some of the noteworthy projects I have built</p>
+    <div className="max-w-6xl mx-auto">
+      <div className="bg-white py-12 px-4 font-sans">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center mb-4 pt-8">
+            {/* Badge */}
+            <span className="inline-block bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold">
+              Work
+            </span>
+          </div>
+          <h2 className="text-center text-lg md:text-xl text-[#4b637b] font-medium mb-10">
+            Some of the noteworthy projects I have built:
+          </h2>
+          {/* Projects */}
+          <div className="flex flex-col gap-12">
+            {filteredRepos.map((repo) => (
+              <div
+                className="bg-gray-50 rounded-2xl shadow-sm p-8 flex flex-col md:flex-row gap-8 items-center"
+                key={repo.id}
+              >
+                {/* Project Image */}
+                <div className="md:w-1/2 w-full flex justify-center">
+                  <img
+                    src={repo.homepage || "/Images/project-placeholder.webp"}
+                    alt={repo.name}
+                    style={{ minHeight: "220px", background: "#f3f4f6" }}
+                    className="rounded-xl shadow-md w-full max-w-md object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "/Images/project-placeholder.webp";
+                    }}
+                  />
+                </div>
+                {/* Project Details */}
+                <div className="md:w-1/2 w-full flex flex-col justify-center">
+                  <h3 className="font-bold text-xl text-gray-900 mb-2">
+                    {repo.name}
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    {repo.description || "No description provided."}
+                  </p>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {(repo.topics || []).map((topic) => (
+                      <span
+                        className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+                        key={topic}
+                      >
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                  {/* External Link */}
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-gray-500 hover:text-blue-600 mt-2"
+                  >
+                    <OpenInNewIcon fontSize="small" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div className="project-main">
-            <div className="projects">
-                <div className="project1-left">
-                    <a href="https://fancy-thunder.github.io/Construction-Website/" target="_blank"><img src="/Images/construction-website-project.png" alt="" width="100%" height="100%"></img></a>
-                </div>
-                <div className="project1-right">
-                    <div className="right-div">
-                        <a href="https://github.com/fancy-thunder/Construction-Website" target="_blank"><h1>Construction Company Website Clone</h1></a>
-                        <p>I built a responsive clone of a construction company website using HTML and CSS, focusing on a clean design, structured layout, and user-friendly interface. The website includes sections like Home, Services, Projects, About Us, Testimonials, and Contact, ensuring a professional look and smooth navigation. <br></br><br></br>
-
-With a well-structured navigation bar, engaging hero section, and detailed service listings, this project helped me refine my skills in flexbox, grid, typography, and layout structuring to create visually appealing and functional web pages.</p><br></br>
-                        <div className="project-skill-buttons">
-                            <button className="project-button">HTML</button>
-                            <button className="project-button">CSS</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="projects">
-                <div className="project2-left">
-                    <div className="left-div">
-                        <a href="https://github.com/fancy-thunder/sign-in-page" target="_blank"><h1>A Simple Sign In Page</h1></a>
-                        <p>I designed and built a simple yet intuitive sign-in page using HTML and CSS, focusing on user experience and responsiveness. The page features a clean layout with a left section for user authentication and a right section displaying a brand logo.</p><br></br>
-                        <div className="project-skill-buttons">
-                            <button className="project-button">HTML</button>
-                            <button className="project-button">CSS</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="project2-right">
-                    <a href="https://fancy-thunder.github.io/sign-in-page/" target="_blank"><img src="/Images/sign-in-project.png" alt="" width="100%" height="100%"></img></a>
-                </div>
-            </div>
-        </div>
-        <br></br>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projectpage
+export default Projectpage;
