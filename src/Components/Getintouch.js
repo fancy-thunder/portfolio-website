@@ -8,18 +8,18 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Getintouch = () => {
   return (
-    <div className="bg-gray-50 py-12 px-4 font-sans flex flex-col items-center justify-center min-h-screen">
+    <div className="bg-gray-50 py-8 px-4 font-sans flex flex-col items-center justify-center">
       {/* Button */}
-      <button className="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold mb-8 mt-4">
+      <button className="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold mb-4 mt-2">
         Get in touch
       </button>
       {/* Subtitle */}
-      <p className="text-center text-gray-600 text-base max-w-xl mb-8">
+      <p className="text-center text-gray-600 text-base max-w-xl mb-6">
         I'd love to connect! Feel free to reach out if you're looking for a
         developer, have a question, or just want to chat.
       </p>
       {/* Email and Phone */}
-      <div className="flex flex-col items-center gap-4 mb-8">
+      <div className="flex flex-col items-center gap-3 mb-6">
         <div className="flex items-center gap-2">
           <EmailOutlinedIcon className="text-gray-500" />
           <span className="text-xl md:text-2xl font-bold text-gray-900">
@@ -36,10 +36,10 @@ const Getintouch = () => {
         </div>
       </div>
       {/* Socials */}
-      <div className="text-center text-gray-500 text-sm mb-2">
+      <div className="text-center text-gray-500 text-sm mb-1">
         You may also find me on these platforms!
       </div>
-      <div className="flex items-center justify-center gap-6 mb-8">
+      <div className="flex items-center justify-center gap-6 mb-4">
         <a
           href="https://github.com/fancy-thunder"
           target="_blank"

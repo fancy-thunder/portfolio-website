@@ -5,7 +5,7 @@ const experiences = [
     company: "CloudOu",
     logo: "/Images/cloud-ou-logo.webp",
     role: "Web Dev Intern",
-    date: "January 2025 - Present",
+    date: "January 2025 - March 2025",
     details: [
       "Transformed designs into fully functional web pages",
       "Developed and integrated APIs for seamless functionality",
