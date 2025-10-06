@@ -16,7 +16,7 @@ const experiences = [
 
 const Experiencepage = ({ darkMode }) => {
   return (
-    <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
+  <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
       <div className="max-w-4xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-4">

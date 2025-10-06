@@ -70,7 +70,7 @@ const tools = [
 
 const Skillpage = ({ darkMode }) => {
   return (
-    <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
+  <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-4 pt-8">
@@ -93,7 +93,11 @@ const Skillpage = ({ darkMode }) => {
                 <img
                   src={lang.icon}
                   alt={lang.name}
-                  className="w-14 h-14 mb-2 object-contain"
+                  className={`w-14 h-14 mb-2 object-contain${
+                    darkMode && ["MySQL"].includes(lang.name)
+                      ? " filter invert brightness-200"
+                      : ""
+                  }`}
                   loading="lazy"
                 />
                 <span className="text-sm md:text-base text-gray-700 font-medium">
@@ -114,7 +118,11 @@ const Skillpage = ({ darkMode }) => {
                 <img
                   src={tool.icon}
                   alt={tool.name}
-                  className="w-14 h-14 mb-2 object-contain"
+                  className={`w-14 h-14 mb-2 object-contain${
+                    darkMode && ["GitHub", "Vercel"].includes(tool.name)
+                      ? " filter invert brightness-200"
+                      : ""
+                  }`}
                   loading="lazy"
                 />
                 <span className="text-sm md:text-base text-gray-700 font-medium">
@@ -135,7 +143,11 @@ const Skillpage = ({ darkMode }) => {
                 <img
                   src={fw.icon}
                   alt={fw.name}
-                  className="w-14 h-14 mb-2 object-contain"
+                  className={`w-14 h-14 mb-2 object-contain${
+                    darkMode && ["WordPress", "FastAPI"].includes(fw.name)
+                      ? " filter invert brightness-200"
+                      : ""
+                  }`}
                   loading="lazy"
                 />
                 <span className="text-sm md:text-base text-gray-700 font-medium">

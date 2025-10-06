@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Getintouch = ({ darkMode }) => {
   return (
-    <div className={`py-8 px-4 font-sans flex flex-col items-center justify-center transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
+  <div className={`py-8 px-4 font-sans flex flex-col items-center justify-center transition-colors duration-300 ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
       {/* Button */}
       <button className={`px-4 py-1 rounded-full text-sm font-semibold mb-4 mt-2 ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-100 text-gray-700"}`}>
         Get in touch

@@ -4,7 +4,7 @@ import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
 const Aboutmepage = ({ darkMode }) => {
   return (
-    <div className={`py-8 px-4 font-sans min-h-screen transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
+  <div className={`py-8 px-4 font-sans min-h-screen transition-colors duration-300 ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
       <div className="max-w-6xl mx-auto">
         {/* Top Badge */}
         <div className="flex pt-8">
