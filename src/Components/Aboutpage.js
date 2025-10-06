@@ -7,9 +7,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Aboutpage = ({ darkMode }) => {
   return (
-  <div className={`mt-16 py-0 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
+  <div className={`pt-16 py-0 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
       {/* Main Section */}
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 py-8">
+  <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-start gap-12 py-8">
         {/* Left Section: HTML/JS content */}
   <div className="md:w-2/3 w-full">
           <h1 className={`text-4xl md:text-5xl font-bold mb-6 flex items-center ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>
