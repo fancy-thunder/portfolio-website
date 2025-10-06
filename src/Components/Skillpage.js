@@ -70,7 +70,7 @@ const tools = [
 
 const Skillpage = ({ darkMode }) => {
   return (
-  <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
+  <div id="skills_section" className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-4 pt-8">
@@ -79,9 +79,9 @@ const Skillpage = ({ darkMode }) => {
           </span>
         </div>
         {/* Heading */}
-  <h2 className={`text-center text-lg md:text-xl mb-10 ${darkMode ? "text-white" : "text-[#4b637b]"}`} style={darkMode ? { color: '#F3F3F3', fontWeight: 400 } : {}}>
-          The skills, tools and technologies I am really good at:
-        </h2>
+  <h2 className={`text-center text-base sm:text-lg md:text-xl font-medium mb-10 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
+    The skills, tools and technologies I am really good at:
+  </h2>
         {/* Languages */}
         <div className="mb-10">
           <h3 className={`text-xl mb-6 text-center ${darkMode ? "text-white" : "text-gray-900"}`} style={darkMode ? { color: '#F3F3F3', fontWeight: 400 } : {}}>

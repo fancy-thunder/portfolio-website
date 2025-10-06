@@ -16,17 +16,17 @@ const experiences = [
 
 const Experiencepage = ({ darkMode }) => {
   return (
-  <div className={`py-8 px-2 sm:py-12 sm:px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
-  <div className="max-w-4xl mx-auto w-full">
+  <div id="skills_section" className={`py-8 px-2 sm:py-12 sm:px-4 font-sans transition-colors duration-300 overflow-x-hidden ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}> 
+  <div className="max-w-4xl mx-auto w-full overflow-x-hidden">
         {/* Badge */}
         <div className="flex justify-center mb-4">
           <span className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-semibold ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-200 text-gray-700"}`}>
-            Work
+            Experience
           </span>
         </div>
         {/* Heading */}
         <h2 className={`text-center text-base sm:text-lg md:text-xl font-medium mb-6 sm:mb-10 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
-          Some of the noteworthy projects I have built:
+          Where I’ve Gained Experience:
         </h2>
         {/* Experience Card */}
   <div className="flex flex-col gap-6 sm:gap-8">
@@ -41,7 +41,7 @@ const Experiencepage = ({ darkMode }) => {
                   <img
                     src={exp.logo}
                     alt={exp.company}
-                    className="h-7 w-7 sm:h-8 sm:w-auto rounded-md mr-2"
+                    className="h-10 w-24 sm:h-8 sm:w-auto rounded-md mr-2"
                   />
                   <span className={`font-semibold text-base sm:text-lg md:text-xl ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>
                     {exp.role}

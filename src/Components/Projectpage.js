@@ -25,7 +25,7 @@ const Projectpage = ({ darkMode }) => {
   );
 
   return (
-    <div className="mx-auto">
+    <div id="projects_section" className="mx-auto">
   <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-center mb-4 pt-8">

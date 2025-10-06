@@ -9,16 +9,24 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const handleToggle = () => setDarkMode(!darkMode);
   const handleDrawer = () => setDrawerOpen(!drawerOpen);
 
+  // Smooth scroll handler
+  const handleScroll = (sectionId) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setDrawerOpen(false);
+    }
+  };
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-3 transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}> 
       {/* Logo */}
   <div className={`text-2xl font-bold ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`} style={{whiteSpace: "nowrap", display: "flex", alignItems: "center"}}>&lt;AS /&gt;</div>
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center space-x-8">
-        <a href="#about_section" className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>About</a>
-        <a href="#work_section" className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>Skills & Experience</a>
-        <a href="#testimonials_section" className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>Testimonials</a>
-        <a href="#contact_section" className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>Contact</a>
+  <button onClick={() => handleScroll('about_section')} className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>About</button>
+  <button onClick={() => handleScroll('skills_section')} className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>Skills & Experience</button>
+  <button onClick={() => handleScroll('projects_section')} className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>Projects</button>
+  <button onClick={() => handleScroll('contact_section')} className={`font-medium ${darkMode ? "text-[#A1A1AA] hover:text-[#F3F3F3]" : "text-gray-600 hover:text-gray-900"}`}>Contact</button>
         <span className={`h-6 w-px mx-2 ${darkMode ? "bg-[#23272F]" : "bg-gray-300"}`}></span>
         <button onClick={handleToggle} className="focus:outline-none">
           {darkMode ? <DarkModeOutlinedIcon className="text-yellow-400" /> : <WbSunnyOutlinedIcon className="text-yellow-500" />}
@@ -43,10 +51,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               <button onClick={handleDrawer} className="focus:outline-none"><CloseIcon fontSize="large" /></button>
             </div>
             <nav className="flex flex-col gap-5 mb-8">
-              <a href="#about_section" className={`font-medium text-[17px] ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>About</a>
-              <a href="#work_section" className={`font-medium text-[17px] ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Work</a>
-              <a href="#testimonials_section" className={`font-medium text-[17px] ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Testimonials</a>
-              <a href="#contact_section" className={`font-medium text-[17px] ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Contact</a>
+              <button onClick={() => handleScroll('about_section')} className={`font-medium text-[17px] text-left ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>About</button>
+              <button onClick={() => handleScroll('skills_section')} className={`font-medium text-[17px] text-left ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Skills & Experience</button>
+              <button onClick={() => handleScroll('projects_section')} className={`font-medium text-[17px] text-left ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Projects</button>
+              <button onClick={() => handleScroll('contact_section')} className={`font-medium text-[17px] text-left ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Contact</button>
             </nav>
             <div className="flex items-center justify-between border-t border-gray-100 dark:border-[#23272F] pt-5 mb-6">
               <span className={`font-medium ${darkMode ? 'text-[#A1A1AA]' : 'text-black'}`}>Switch Theme</span>
