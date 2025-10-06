@@ -68,13 +68,13 @@ const tools = [
   },
 ];
 
-const Skillpage = () => {
+const Skillpage = ({ darkMode }) => {
   return (
-    <div className="bg-white py-12 px-4 font-sans">
+    <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-4 pt-8">
-          <span className="inline-block bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold">
+          <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-100 text-gray-700"}`}>
             Skills
           </span>
         </div>

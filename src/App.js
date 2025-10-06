@@ -10,21 +10,21 @@ import Footer from "./Components/Footer";
 import Chatbot from "./Components/Chatbot";
 
 const App = () => {
-  const [hovering, setHovering] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     document.title = "Avishek Sen";
   }, []);
   return (
-    <div>
-      <Navbar />
-      <Chatbot />
-      <Aboutpage />
-      <Aboutmepage />
-      <Skillpage />
-      <Experiencepage />
-      <Projectpage />
-      <Getintouch />
-      <Footer />
+    <div className={darkMode ? "bg-[#181824] text-[#F3F3F3] min-h-screen transition-colors duration-300" : "bg-white text-gray-900 min-h-screen transition-colors duration-300"}>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Chatbot darkMode={darkMode} />
+      <Aboutpage darkMode={darkMode} />
+      <Aboutmepage darkMode={darkMode} />
+      <Skillpage darkMode={darkMode} />
+      <Experiencepage darkMode={darkMode} />
+      <Projectpage darkMode={darkMode} />
+      <Getintouch darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </div>
   );
 };

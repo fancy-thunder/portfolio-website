@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
-const Aboutmepage = () => {
+const Aboutmepage = ({ darkMode }) => {
   return (
-    <div className="bg-gray-50 py-8 px-4 font-sans">
+    <div className={`py-8 px-4 font-sans min-h-screen transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
       <div className="max-w-6xl mx-auto">
         {/* Top Badge */}
         <div className="flex pt-8">
-          <span className="inline-block bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold mx-auto font-sans mb-8">
+          <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold mx-auto font-sans mb-8 ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-200 text-gray-700"}`}>
             About me
           </span>
         </div>
         {/* Main Content: Image and Text side by side */}
-        <div className="flex flex-col md:flex-row items-start gap-12">
+  <div className="flex flex-col md:flex-row items-start gap-12">
           {/* Left Section: Image (CSS visual) */}
           <div className="md:w-1/2 w-full flex justify-center">
             <div className="relative w-[400px] h-[500px]">
-              <div className="absolute left-[-24px] top-[-24px] w-[400px] h-[500px] bg-gray-100 rounded-md z-0"></div>
+              <div className={`absolute left-[-24px] top-[-24px] w-[400px] h-[500px] rounded-md z-0 ${darkMode ? "bg-[#23272F]" : "bg-gray-100"}`}></div>
               <img
                 src="/Images/about-me.jpg"
                 alt="About Me"
@@ -25,17 +27,17 @@ const Aboutmepage = () => {
           </div>
           {/* Right Section: Content (HTML/JS) */}
           <div className="md:w-1/2 w-full font-sans">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 font-sans">
+            <h1 className={`text-2xl md:text-3xl font-bold mb-6 font-sans ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>
               Curious about me? Here you have it:
             </h1>
-            <div className="text-[#4b637b] text-base md:text-lg space-y-6 font-sans">
+            <div className={`text-base md:text-lg space-y-6 font-sans ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
               <p>
                 Hello there!{" "}
                 <span role="img" aria-label="wave">
                   👋
                 </span>{" "}
                 I'm{" "}
-                <span className="font-bold text-[#4b5563]">
+                <span className={`font-bold ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                   a passionate, self-taught developer
                 </span>{" "}
                 on a mission to master Full-Stack Web Development. I love
@@ -47,7 +49,7 @@ const Aboutmepage = () => {
               </p>
               <p>
                 I’m{" "}
-                <span className="font-bold text-[#4b5563]">
+                <span className={`font-bold ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                   a final Computer Science student at KiiT University,
                   Bhubaneshwar
                 </span>
@@ -56,7 +58,7 @@ const Aboutmepage = () => {
                 through personal projects, working with startups, or just
                 tinkering with new tech. Since starting my journey, I’ve worked
                 with{" "}
-                <span className="font-bold text-[#4b5563]">
+                <span className={`font-bold ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                   HTML, CSS, JavaScript, React, Supabase, and more
                 </span>
                 , and while I’m still a beginner, I love the process of
@@ -96,30 +98,30 @@ const Aboutmepage = () => {
                   🚀
                 </span>
               </p>
-              <p className="text-[#4b637b] font-bold">
+              <p className={`font-bold ${darkMode ? "text-[#F3F3F3]" : "text-[#4b637b]"}`}>
                 Finally, some quick points about me:
               </p>
               <div className="flex flex-row mt-2">
                 <ul className="list-disc pl-6 space-y-2 w-1/2">
                   <li>
-                    <span className="font-medium text-[#4b5563]">
+                    <span className={`font-medium ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                       B.Tech in Computer Science Engineering
                     </span>
                   </li>
                   <li>
-                    <span className="font-medium text-[#4b5563]">
+                    <span className={`font-medium ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                       Enthusiastic and avid learner
                     </span>
                   </li>
                 </ul>
                 <ul className="list-disc pl-6 space-y-2 w-1/2">
                   <li>
-                    <span className="font-medium text-[#4b5563]">
+                    <span className={`font-medium ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                       Part time freelancer
                     </span>
                   </li>
                   <li>
-                    <span className="font-medium text-[#4b5563]">
+                    <span className={`font-medium ${darkMode ? "text-[#F3F3F3]" : "text-[#4b5563]"}`}>
                       Problem Solver
                     </span>
                   </li>

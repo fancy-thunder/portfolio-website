@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Chatbot = () => {
+const Chatbot = ({ darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,8 +12,8 @@ const Chatbot = () => {
           position: "fixed",
           bottom: "20px",
           right: "20px",
-          backgroundColor: "rgb(17,24,39)", // Dark grayish-blue color
-          color: "#fff",
+          backgroundColor: darkMode ? "#23272F" : "rgb(17,24,39)",
+          color: darkMode ? "#F3F3F3" : "#fff",
           border: "none",
           padding: "10px 20px",
           borderRadius: "5px",
@@ -38,7 +38,7 @@ const Chatbot = () => {
             boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
             borderRadius: "10px",
             overflow: "hidden",
-            backgroundColor: "#fff",
+            backgroundColor: darkMode ? "#23272F" : "#fff",
           }}
         >
           {/* Chatbot iframe */}

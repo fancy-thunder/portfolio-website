@@ -4,7 +4,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 const GITHUB_USERNAME = "fancy-thunder"; // change to your GitHub username
 const ALLOWED_REPOS = ["CollabStudy", "weather-dashboard", "portfolio-website"]; // replace with your repo names
 
-const Projectpage = () => {
+const Projectpage = ({ darkMode }) => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
@@ -26,22 +26,22 @@ const Projectpage = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="bg-white py-12 px-4 font-sans">
+      <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#181824] text-[#F3F3F3]" : "bg-white text-gray-900"}`}>
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-center mb-4 pt-8">
             {/* Badge */}
-            <span className="inline-block bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold">
+            <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-100 text-gray-700"}`}>
               Work
             </span>
           </div>
-          <h2 className="text-center text-lg md:text-xl text-[#4b637b] font-medium mb-10">
+          <h2 className={`text-center text-lg md:text-xl font-medium mb-10 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
             Some of the noteworthy projects I have built:
           </h2>
           {/* Projects */}
           <div className="flex flex-col gap-12">
             {filteredRepos.map((repo) => (
               <div
-                className="bg-gray-50 rounded-2xl shadow-sm p-8 flex flex-col md:flex-row gap-8 items-center"
+                className={`rounded-2xl shadow-sm p-8 flex flex-col md:flex-row gap-8 items-center transition-colors duration-300 ${darkMode ? "bg-[#23272F] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}
                 key={repo.id}
               >
                 {/* Project Image */}
@@ -59,17 +59,17 @@ const Projectpage = () => {
                 </div>
                 {/* Project Details */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center">
-                  <h3 className="font-bold text-xl text-gray-900 mb-2">
+                  <h3 className={`font-bold text-xl mb-2 ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>
                     {repo.name}
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className={`mb-4 ${darkMode ? "text-[#A1A1AA]" : "text-gray-700"}`}>
                     {repo.description || "No description provided."}
                   </p>
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {(repo.topics || []).map((topic) => (
                       <span
-                        className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${darkMode ? "bg-[#181824] text-[#A1A1AA]" : "bg-gray-200 text-gray-700"}`}
                         key={topic}
                       >
                         {topic}
