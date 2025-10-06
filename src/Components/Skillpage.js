@@ -79,12 +79,12 @@ const Skillpage = ({ darkMode }) => {
           </span>
         </div>
         {/* Heading */}
-        <h2 className="text-center text-lg md:text-xl text-[#4b637b] font-medium mb-10">
+  <h2 className={`text-center text-lg md:text-xl mb-10 ${darkMode ? "text-white" : "text-[#4b637b]"}`} style={darkMode ? { color: '#F3F3F3', fontWeight: 400 } : {}}>
           The skills, tools and technologies I am really good at:
         </h2>
         {/* Languages */}
         <div className="mb-10">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+          <h3 className={`text-xl mb-6 text-center ${darkMode ? "text-white" : "text-gray-900"}`} style={darkMode ? { color: '#F3F3F3', fontWeight: 400 } : {}}>
             Languages
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-10 gap-x-6 md:gap-x-12 justify-items-center">
@@ -94,9 +94,7 @@ const Skillpage = ({ darkMode }) => {
                   src={lang.icon}
                   alt={lang.name}
                   className={`w-14 h-14 mb-2 object-contain${
-                    darkMode && ["MySQL"].includes(lang.name)
-                      ? " filter invert brightness-200"
-                      : ""
+                    darkMode ? " filter invert brightness-200" : ""
                   }`}
                   loading="lazy"
                 />
@@ -109,7 +107,7 @@ const Skillpage = ({ darkMode }) => {
         </div>
         {/* Developer Tools */}
         <div className="mb-10">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+          <h3 className={`text-xl mb-6 text-center ${darkMode ? "text-white" : "text-gray-900"}`} style={darkMode ? { color: '#F3F3F3', fontWeight: 400 } : {}}>
             Developer Tools
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-10 gap-x-6 md:gap-x-12 justify-items-center">
@@ -119,9 +117,7 @@ const Skillpage = ({ darkMode }) => {
                   src={tool.icon}
                   alt={tool.name}
                   className={`w-14 h-14 mb-2 object-contain${
-                    darkMode && ["GitHub", "Vercel"].includes(tool.name)
-                      ? " filter invert brightness-200"
-                      : ""
+                    darkMode ? " filter invert brightness-200" : ""
                   }`}
                   loading="lazy"
                 />
@@ -134,7 +130,7 @@ const Skillpage = ({ darkMode }) => {
         </div>
         {/* Frameworks */}
         <div>
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+          <h3 className={`text-xl mb-6 text-center ${darkMode ? "text-white" : "text-gray-900"}`} style={darkMode ? { color: '#F3F3F3', fontWeight: 400 } : {}}>
             Frameworks
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-y-10 gap-x-6 md:gap-x-12 justify-items-center">
@@ -144,9 +140,7 @@ const Skillpage = ({ darkMode }) => {
                   src={fw.icon}
                   alt={fw.name}
                   className={`w-14 h-14 mb-2 object-contain${
-                    darkMode && ["WordPress", "FastAPI"].includes(fw.name)
-                      ? " filter invert brightness-200"
-                      : ""
+                    darkMode ? " filter invert brightness-200" : ""
                   }`}
                   loading="lazy"
                 />

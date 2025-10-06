@@ -16,45 +16,42 @@ const experiences = [
 
 const Experiencepage = ({ darkMode }) => {
   return (
-  <div className={`py-12 px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
-      <div className="max-w-4xl mx-auto">
+  <div className={`py-8 px-2 sm:py-12 sm:px-4 font-sans transition-colors duration-300 ${darkMode ? "bg-[#111827] text-[#F3F3F3]" : "bg-gray-50 text-gray-900"}`}>
+  <div className="max-w-4xl mx-auto w-full">
         {/* Badge */}
         <div className="flex justify-center mb-4">
-          <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-200 text-gray-700"}`}>
-            Experience
+          <span className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-semibold ${darkMode ? "bg-[#23272F] text-[#A1A1AA]" : "bg-gray-200 text-gray-700"}`}>
+            Work
           </span>
         </div>
         {/* Heading */}
-        <h2 className={`text-center text-lg md:text-xl font-medium mb-10 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
-          Here is a quick summary of my most recent experiences:
+        <h2 className={`text-center text-base sm:text-lg md:text-xl font-medium mb-6 sm:mb-10 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
+          Some of the noteworthy projects I have built:
         </h2>
         {/* Experience Card */}
-        <div className="space-y-8">
+  <div className="flex flex-col gap-6 sm:gap-8">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className={`rounded-xl shadow-sm p-8 flex flex-col gap-4 border transition-colors duration-300 ${darkMode ? "bg-[#23272F] border-[#23272F] text-[#F3F3F3]" : "bg-white border-gray-100 text-gray-900"}`}
-              style={{
-                boxShadow: "0 2px 6px 0 rgba(75,85,99,0.06)",
-                borderRadius: "0.75rem",
-              }}
+              className={`rounded-lg sm:rounded-xl p-4 sm:p-8 flex flex-col gap-3 sm:gap-4 transition-colors duration-300 w-full ${darkMode ? "bg-[#23272F] text-[#F3F3F3]" : "bg-white text-gray-900"}`}
+              style={{ borderRadius: "0.75rem" }}
             >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                <div className="flex items-center gap-2">
                   <img
                     src={exp.logo}
                     alt={exp.company}
-                    className="h-8 w-auto mr-3"
+                    className="h-7 w-7 sm:h-8 sm:w-auto rounded-md mr-2"
                   />
-                  <span className={`font-bold text-lg md:text-xl ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>
+                  <span className={`font-semibold text-base sm:text-lg md:text-xl ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>
                     {exp.role}
                   </span>
                 </div>
-                <div className={`text-sm md:text-base whitespace-nowrap ${darkMode ? "text-[#A1A1AA]" : "text-gray-500"}`}>
+                <div className={`text-xs sm:text-sm md:text-base whitespace-nowrap ${darkMode ? "text-[#A1A1AA]" : "text-gray-500"}`}>
                   {exp.date}
                 </div>
               </div>
-              <ul className={`list-disc pl-5 space-y-1 text-base mt-2 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
+              <ul className={`list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base mt-2 ${darkMode ? "text-[#A1A1AA]" : "text-[#4b637b]"}`}>
                 {exp.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}
