@@ -7,7 +7,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     setDarkMode(!darkMode);
   };
   return (
-  <nav className={`w-full flex items-center justify-between px-6 py-3 transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}> 
+  <nav className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-3 transition-colors duration-300 ${darkMode ? "bg-[#030712] text-[#F3F3F3]" : "bg-white text-gray-900"}`}> 
       {/* Logo */}
   <div className={`text-2xl font-bold ${darkMode ? "text-[#F3F3F3]" : "text-gray-900"}`}>&lt;AS /&gt;</div>
       {/* Right Section: Links, Icon, Button */}
