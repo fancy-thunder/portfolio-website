@@ -43,7 +43,7 @@ const Chatbot = ({ darkMode }) => {
         >
           {/* Chatbot iframe */}
           <iframe
-            src="https://www.chatbase.co/chatbot-iframe/D5uknssSnno1J5Ki24kWo"
+            src={`https://www.chatbase.co/chatbot-iframe/MOjZD4mz77Yx69EWEr79t`}
             title="Chatbot"
             style={{
               width: "100%",
@@ -51,18 +51,6 @@ const Chatbot = ({ darkMode }) => {
               border: "none",
             }}
           ></iframe>
-
-          {/* White overlay to hide branding & bot name */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "0",
-              left: "0",
-              width: "100%",
-              height: "50px", // Adjusted height to hide both branding & bot name
-              backgroundColor: "#fff", // White background to cover elements
-            }}
-          ></div>
         </div>
       )}
     </>
